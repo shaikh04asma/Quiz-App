@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islamic Question Quiz</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Main container for the quiz app -->
+    <div class="app main-div">
+      <!-- Title of the quiz -->
+      <div class="apptest heading"><p>Islamic Quiz</p></div>
+      <!-- Container for score and timer -->
+      <div class="appno score-time">
+        <!-- Score display -->
+        <p class="score-done"><span class="score  score-complete">SCORE: 0</span></p>
+         <!-- Progress display -->
+    <div class="noto"id="progress">
+      1/10
+    </div>
+        <!-- Timer display -->
+        <p id="timer" class="timer-complete">10</p>
+        <!-- Add a new element for the timer countdown -->
+      </div>
+      <!-- Container for quiz question and answers -->
+      <div class="quiz">
+        <!-- Question display -->
+        <h2 id="question" class="question-container">
+          Question 1: Which Surah does not start with bismillah?
+        </h2>
+        <!-- Container for answer options -->
+        <div class="answer-ques option-container">
+          <!-- Answer buttons -->
+          <button class="btn" onclick="checkAnswer(this)">Surah Tawbah</button>
+          <button class="btn" onclick="checkAnswer(this)">Surah Al-Imraan</button><br /><br>
+          <button class="btn" onclick="checkAnswer(this)">Suran Al-Fatiha</button>
+          <button class="btn" onclick="checkAnswer(this)">Surah Rahman</button>
+          <br><br>
+        </div>
+      
+        <!-- Button to move to the next question -->
+        <button id="nextquestion"class
+        ="nxt" onclick="nextQuestion()"class="nxt">
+          Next Question
+        </button>
+      </div>
+    </div>
+   
+
+    <!-- Include JavaScript file -->
+    <script src="../javascript file/islamic.js"></script>
+  </body>
+</html>

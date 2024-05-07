@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* root for easy access */
+:root {
+  --color: #6600ff;
+  --background-color: #e0ccff;
+  --font-size: 22px;
+  --border: 3px solid rgb(189, 185, 185);
+  --border-rds: 5px;
+  --border-col: #6600ff;
+}
+/* Home Page CSS */
+/* main div  container */
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+  border-radius: var(--border-rds);
+  width: 50%;
+  margin-top: 4rem;
+}
+.main-div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+  border-radius: var(--border-rds);
+  width: 50%;
+  margin-top: 4rem;
+  padding: 20px;
+}
+.head {
+  color: var(--color);
+  margin-top: 2rem;
+}
+/* it will shake the text on the browser */
+.shake {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-iteration-count: 12;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-8px);
+  }
+
+  40% {
+    transform: translateX(8px);
+  }
+
+  60% {
+    transform: translateX(-8px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* logo of quiz app */
+img {
+  height: 138px;
+}
+/* to take user name here */
+.inputform {
+  width: 100%;
+}
+#form {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  width: 100%;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 60%;
+  height: 1.5rem;
+  margin: 10px;
+  border-radius: var(--border-rds);
+  border: var(--border);
+  padding: 0.9rem;
+}
+/* enter button after entring the name  */
+.enter {
+  width: 15%;
+  background-color: var(--color);
+  color: white;
+  height: 2rem;
+  border-radius: var(--border-rds);
+  border-color: var(--color);
+  font-weight: bolder;
+  padding:5px;
+}
+.enter:hover {
+  scale: 0.8;
+  border: none;
+  box-shadow: 0px 0px 40px #9857f9;
+}
+
+h4 {
+  margin: 5px;
+  text-align: center;
+  color: rgb(189, 185, 185);
+  font-family: cursive;
+  font-weight: lighter;
+}
+#namedisplay {
+  text-align: center;
+  color: #6600ff;
+  font-weight: bold;
+  font-family: cursive;
+}
+/* style the category button of  select tag */
+#category {
+  border-top: 1px solid lightgrey;
+  width: 100%;
+  border-width: 90%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5%;
+  color: #9857f9;
+}
+.select1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.select2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  height: 2.5rem;
+  border-radius: var(--border-rds);
+  border-color: var(--border-col);
+  color: #6600ff;
+  background-color: var(--background-color);
+  margin-left: 10px;
+  width: 40%;
+}
+.btn:hover {
+  scale: 0.8;
+  border: none;
+  box-shadow: 0px 0px 40px #9857f9;
+}
+h3 {
+  width: 30%;
+  height: 2rem;
+  border-radius: var(--border-rds);
+  border-color: var(--border-col);
+  color: #6600ff;
+  background-color: var(--background-color);
+  margin-left: 10px;
+  text-align: center;
+  border: 2px solid #6600ff;
+  
+}
+h3 a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+/* Quiz page CSS  */
+.heading {
+  text-align: center;
+  color: #6600ff;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 26px;
+  margin: 20px;
+}
+.question-container {
+  padding: 10px;
+}
+.option-container {
+  width: 80%;
+  border-width: 80%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5%;
+  margin: auto;
+  margin-top: 20px;
+  /* margin: 20px; */
+}
+
+.timer-complete {
+  border: 2px solid #6600ff;
+  border-radius: 50%;
+  padding: 8px;
+  color: #6600ff;
+  border-color: #6600ff;
+  display: inline;
+  font-size: 18px;
+}
+.score-complete {
+  font-family: "Courier New", Courier, monospace;
+  color: #6600ff;
+  border: #6600ff solid 2px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.score-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.noto {
+  display: block;
+  border: 2px solid #6600ff;
+  border-radius: 50%;
+  padding: 10px;
+}
+h2 {
+  border: var(--border);
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+button {
+  width: 30%;
+  height: 2rem;
+  border-radius: var(--border-rds);
+  border-color: var(--border-col);
+  color: #6600ff;
+  background-color: var(--background-color);
+  margin-left: 10px;
+}
+button:hover {
+  scale: 0.8;
+  border: none;
+  box-shadow: 0px 0px 40px #9857f9;
+}
+.start {
+  display: none;
+}
+.nxt {
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+/* Result page CSS */
+.result-head {
+  color: var(--color);
+}
+.result-btn {
+  padding: 8px 35px;
+  background-color: var(--background-color);
+  border-color: var(--border-col);
+  border-radius: 15px;
+  margin-top: 1rem;
+  color: #6600ff;
+}
+.result-btn:hover {
+  scale: 0.8;
+  border: none;
+  box-shadow: 0px 0px 40px #9857f9;
+}
+.slide-in {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+.text {
+  color: rgb(114, 114, 114);
+  font-size: 18px;
+  padding: 5px;
+  
+}
+button a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exam{
+  
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}

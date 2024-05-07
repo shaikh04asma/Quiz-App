@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reuslt Page</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Container for the quiz result -->
+    <div class="filex main-div">
+      <!-- Title of the quiz result -->
+      <div id="vvvvv">
+        <p class="heading slide-in">Quiz Result:</p>
+      </div>
+      <!-- Display full name -->
+      <div class="fullname">
+        <p>Name : <span id="namedisplay"></span>!</p>
+      </div>
+      <!-- Display total time taken -->
+      <div class="totalno">
+        <p class="text">
+          Total Time Taken: <span id="totalTime">0 seconds</span>
+        </p>
+      </div>
+      <!-- Display total questions -->
+      <div class="TotalQuestion">
+        <p class="text">Total Questions: <span id="totalQuestions">0</span></p>
+      </div>
+      <!-- Display total attempted questions -->
+      <div class="attempt">
+        <p class="text">
+          Total Attempted: <span id="attemptedQuestions">0</span>
+        </p>
+      </div>
+      <!-- Display pass/fail status -->
+      <div class="pass-fail">
+        <p class="text">Pass/Fail: <span id="passFail"></span></p>
+      </div>
+      <!-- Display number of correct answers -->
+      <div class="correct">
+        <p class="text">Correct Answers: <span id="correctAnswers">0</span></p>
+      </div>
+      <!-- Display number of wrong answers -->
+      <div class="wrong">
+        <p class="text">Wrong Answers: <span id="wrongAnswers">0</span></p>
+      </div>
+      <!-- Display percentage score -->
+      <div class="precentage">
+        <p class="text">Percentage: <span id="percentage">0%</span></p>
+      </div>
+      <!-- Buttons for navigating to other pages -->
+      <div class="exam">
+        <!-- Button to navigate to the Home page -->
+        <button><a class="btn2" href="Home.html">Back to Home</a></button>
+        <!-- Button to navigate to the Exam page -->
+        <button><a class="btn2" href="HtmlCss.html">Try Again!!</a></button>
+      </div>
+    </div>
+    <!-- Script to handle local storage and button click events -->
+    <script src="../javascript file/result.js"></script>
+    <script>
+      // Retrieve name from local storage and display it
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namedisplay").textContent = name;
+      }
+      // Get all the buttons for navigation
+      const buttons = document.querySelectorAll(".exam button");
+      // Add click event listener to each button
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Get the URL from the button's link and navigate to it
+          const url = this.querySelector("a").getAttribute("href");
+          window.location.href = url;
+        });
+      });
+      console.log(window.history);
+    </script>
+  </body>
+</html>
